@@ -170,5 +170,3 @@ class Queue(LinkedList):
     
     def empty(self):
         self.empty()
-
-prueba = Stack()
