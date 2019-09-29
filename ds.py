@@ -1,4 +1,11 @@
-import Node
+class Node:
+    def __init__(self, data = None, next = None):
+        self.data = data
+        self.next = next
+        
+    def __repr__(self):
+        return repr(self.data)
+
 
 class LinkedList:
     def __init__(self):
@@ -15,19 +22,19 @@ class LinkedList:
     
     def pushFront(self, key):
         if self.head:
-            self.head = Node.Node(data = key, next = self.head)
+            self.head = Node(data = key, next = self.head)
         else :
-            this = Node.Node(data = key)
+            this = Node(data = key)
             self.head = this
             self.tail = this
             
     def pushBack(self, key):
         if self.tail:
-            this = Node.Node(data = key, next = None)
+            this = Node(data = key, next = None)
             self.tail.next = this
             self.tail = this
         else :
-            this = Node.Node(data = key)
+            this = Node(data = key)
             self.head = this
             self.tail = this
     
@@ -108,7 +115,7 @@ class LinkedList:
                         this = this.next
 
                     if this == node:
-                        this = Node.Node(data = key)
+                        this = Node(data = key)
                         prev.next = this
                         this.next = node.next
 
@@ -127,7 +134,7 @@ class LinkedList:
     def addAfter(self, node, key):
         if self.head:
             if self.find(node.data): # Después se puede quitar cuando todo funcione
-                this = Node.Node(data = key)
+                this = Node(data = key)
                 this.next = node.next
                 node.next = this
             else:
@@ -135,4 +142,33 @@ class LinkedList:
         else:
             return "Linked list is empty"
 
-prueba = LinkedList()
+
+class Stack(LinkedList):
+    def push(self, key):
+        self.pushBack(key)
+        
+    def top(self):
+        self.topBack()
+        
+    def pop(self):
+        this = self.topBack()
+        self.popBack()
+        return this
+        
+    def empty(self):
+        self.empty()
+
+
+class Queue(LinkedList):
+    def enqueue(self, key):
+        self.pushBack(key)
+        
+    def dequeue(self):
+        this = self.topFront()
+        self.popFront()
+        return this
+    
+    def empty(self):
+        self.empty()
+
+prueba = Stack()

@@ -1,4 +1,6 @@
-class Stack(LinkedList):
+import LinkedList
+
+class Stack(LinkedList.LinkedList):
     def push(self, key):
         self.pushBack(key)
         
@@ -12,3 +14,4 @@ class Stack(LinkedList):
         
     def empty(self):
         self.empty()
+

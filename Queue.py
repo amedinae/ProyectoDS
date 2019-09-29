@@ -1,4 +1,6 @@
-class Queue(LinkedList):
+import LinkedList
+
+class Queue(LinkedList.LinkedList):
     def enqueue(self, key):
         self.pushBack(key)
         
