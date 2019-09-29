@@ -145,14 +145,14 @@ class LinkedList:
 
 class Stack(LinkedList):
     def push(self, key):
-        self.pushBack(key)
+        self.pushFront(key)
         
     def top(self):
-        self.topBack()
+        self.topFront()
         
     def pop(self):
-        this = self.topBack()
-        self.popBack()
+        this = self.topFront()
+        self.popFront()
         return this
         
     def empty(self):
