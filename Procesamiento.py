@@ -125,8 +125,14 @@ for k in range(len(data)):
 
 # print(listaGrupos)
 algo = [[1, 2, 3], [4, 5, 6], [7, 8, 9, 10]]
+<<<<<<< HEAD
 # print(sumarListas(combinatoria(listaGrupos)))
 print(combinatoria(listaGrupos)[0])
+=======
+#print(sumarListas(combinatoria(listaGrupos)))
+print(sumarListas(combinatoria(listaGrupos))[0]['matriz'])
+# print(combinatoria(listaGrupos))
+>>>>>>> e38809bf3bf0d16cafc080e0d659c86676efe300
 # print(sumarListas([[0, 1, 0], [1, 0, 1], [0, 1, 0]]))
 
 # print(sum([[1, 2, 3, 4, 5], [1, 1, 1, 1, 1]]))
