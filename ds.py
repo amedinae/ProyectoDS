@@ -1,4 +1,4 @@
-class Node:
+class Node(object):
     def __init__(self, data = None, next = None):
         self.data = data
         self.next = next
@@ -7,11 +7,17 @@ class Node:
         return repr(self.data)
 
 
-class LinkedList:
+class LinkedList(object):
     def __init__(self):
         self.head = None
         self.tail = None
     
+    def _iter_(self):
+        current = self.head
+        while current is not None:
+            yield current
+            current = current.next
+
     def __repr__(self):
         nodes = []
         this = self.head

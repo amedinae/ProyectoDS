@@ -1,0 +1,17 @@
+{"count":70,
+	"pags":5,
+	"list":[
+		{"id":"2017771","code":"22118","name":"ANALISIS Y MODELACION DE SISTEMAS BIOLOGICOS","type":"B","credits":3},
+		{"id":"2015361","code":"12203","name":"SISTEMAS DE DERECHO","type":"B","credits":2},{"id":"2016851","code":"16817","name":"ANALISIS DE SISTEMAS DE POTENCIA","type":"C","credits":3},
+		{"id":"2015215","code":"16387","name":"ANALISIS DE SISTEMAS DINAMICOS","type":"C","credits":3},
+		{"id":"2016628","code":"16177","name":"DISEÑO DE SISTEMAS DE RIEGO","type":"C","credits":3},
+		{"id":"2025433","code":"21145","name":"FISIOLOGIA ANIMAL DE SISTEMAS","type":"C","credits":4},
+		{"id":"2025975","code":"22792","name":"INTRODUCCION A LA INGENIERIA DE SISTEMAS Y COMPUTACION ","type":"C","credits":3},
+		{"id":"2016861","code":"16787","name":"INTRODUCCION A LOS SISTEMAS DE ENERGIA ELECTRICA","type":"C","credits":3},
+		{"id":"2025995","code":"21942","name":"INTRODUCCION A LOS SISTEMAS INTELIGENTES","type":"C","credits":3},
+		{"id":"2015198","code":"10459","name":"PARTIDOS POLITICOS Y SISTEMAS ELECTORALES","type":"C","credits":3},
+		{"id":"2016506","code":"18472","name":"SEÑALES Y SISTEMAS I","type":"C","credits":3},
+		{"id":"2017345","code":"10480","name":"SISTEMAS DE GESTION AMBIENTAL","type":"C","credits":2},
+		{"id":"2025982","code":"22051","name":"SISTEMAS DE INFORMACION","type":"C","credits":3},
+		{"id":"2017146","code":"23265","name":"SISTEMAS DE PRODUCCION ACUICOLA","type":"C","credits":4},
+		{"id":"2017148","code":"23266","name":"SISTEMAS DE PRODUCCION AVICOLA","type":"C","credits":4}]}

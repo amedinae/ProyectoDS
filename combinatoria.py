@@ -12,14 +12,14 @@ def setHoras(curso,dia,primeraHora,ultimaHora):
 	return curso
 
 data = []
-# with open('10680.json') as a:
-# 	data.append(json.load(a)) # Dinámica
+with open('10680.json') as a:
+	data.append(json.load(a)) # Dinámica
 
-# with open('16809.json') as b:
-# 	data.append(json.load(b)) # Digital
+with open('16809.json') as b:
+	data.append(json.load(b)) # Digital
 
-# with open('18473.json') as c:
-# 	data.append(json.load(c)) # Señales 2
+with open('18473.json') as c:
+	data.append(json.load(c)) # Señales 2
 
 with open('21949.json') as d:
 	data.append(json.load(d)) # Intensive
@@ -27,6 +27,14 @@ with open('21949.json') as d:
 with open('22969.json') as e:
 	data.append(json.load(e)) # Gráfica interactiva
 
+with open('16706.json') as f:
+	data.append(json.load(f))
+
+with open('16707.json') as g:
+	data.append(json.load(g))
+
+with open('16809.json') as h:
+	data.append(json.load(h))
 primeraHora = 0
 ultimaHora = 0
 
@@ -81,17 +89,21 @@ def sacarLista(listas):
 
 def sumarListas(listas):
 	resultado = [{'horario': horarioVacio() , 'grupo': [], 'asignatura': []} for x in range(len(listas))]
-	resultado = [0 for x in range(len(listas[0]))]
-	for 
-		for i in range(len(resultado)):	
-			for lista in listas:
-					resultado[i] += lista[i]
+	horarios = ds.Queue()
+	
 	for i in range(len(resultado)):
-		for j in range(len(listas[i])):
-			resultado[i]['horario'] = [sum(x[j]['horario']) for x in zip(*combinaciones[i])]
+		sirve = True
+		for j in range(len(listas[i])):	
+			for z in range(len(resultado[i]['horario'])): 
+				resultado[i]['horario'][z] += listas[i][j]['horario'][z]
 			resultado[i]['grupo'].append(listas[i][j]['grupo'])
 			resultado[i]['asignatura'].append(listas[i][j]['asignatura'])
-	return resultado
+			for x in range(112):
+				if (resultado[i]['horario'][x] > 1):
+					sirve = False
+		if sirve:
+			horarios.enqueue(resultado[i])			
+	return horarios
 
 def combinatoria(lista):
 	c = np.zeros(len(lista))
@@ -126,8 +138,10 @@ def printHorario(horario):
 
 #printHorario(sumarListas(combinatoria(listaGrupos))[0]['horario'])
 #print(sumarListas(combinatoria(listaGrupos))[0]['horario'])
-#print(sumarListas(combinatoria(listaGrupos)))
-print(sacarLista(combinatoria(listaGrupos))[0])
+print(sumarListas(combinatoria(listaGrupos)))
+# algo = sumarListas(combinatoria(listaGrupos))
+# with open('data.json', 'w') as f:
+    #json.dump(algo, f)
 #print(listaGrupos[0][1]['horario'])
 #print(listaGrupos)
 

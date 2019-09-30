@@ -40,13 +40,21 @@ def combinatoria(lista):
     return total
 
 def sumarListas(listas):
-    resultado = [{'matriz': np.zeros((16, 7)) , 'grupo': [], 'asignatura': []} for x in range(len(listas))]
-    for i in range(len(resultado)):
+    horarios = ds.Queue()
+    for i in range(len(listas)):
+        resultado = {'matriz': np.zeros((16, 7)), 'grupo': [], 'asignatura': []}
+        sirve = True
         for j in range(len(listas[i])):
-            resultado[i]['matriz'] += listas[i][j]['matriz']
-            resultado[i]['grupo'].append(listas[i][j]['grupo'])
-            resultado[i]['asignatura'].append(listas[i][j]['asignatura'])
-    return resultado
+            resultado['matriz'] += listas[i][j]['matriz']
+            resultado['grupo'].append(listas[i][j]['grupo'])
+            resultado['asignatura'].append(listas[i][j]['asignatura'])
+            for x in range(16):
+                for y in range(7):
+                    if resultado['matriz'][x][y] > 1:
+                        sirve = False
+        if sirve:
+            horarios.enqueue(resultado)
+    return horarios
 
 # def sumarListas(listas):
 #     resultado = [0 for x in range(len(listas[0]))]
@@ -56,14 +64,14 @@ def sumarListas(listas):
 #     return resultado
 
 data = []
-with open('10680.json') as a:
-    data.append(json.load(a))  # Dinámica
-
-with open('16809.json') as b:
-    data.append(json.load(b))  # Digital
-
-with open('18473.json') as c:
-    data.append(json.load(c))  # Señales 2
+# with open('10680.json') as a:
+#     data.append(json.load(a))  # Dinámica
+#
+# with open('16809.json') as b:
+#     data.append(json.load(b))  # Digital
+#
+# with open('18473.json') as c:
+#     data.append(json.load(c))  # Señales 2
 
 with open('21949.json') as d:
     data.append(json.load(d))  # Intensive
@@ -117,9 +125,12 @@ for k in range(len(data)):
 
 # print(listaGrupos)
 algo = [[1, 2, 3], [4, 5, 6], [7, 8, 9, 10]]
-#print(sumarListas(combinatoria(listaGrupos)))
-print(sumarListas(combinatoria(listaGrupos))[0]['matriz'])
-# print(combinatoria(listaGrupos))
+# print(sumarListas(combinatoria(listaGrupos)))
+data = sumarListas(combinatoria(listaGrupos))
+with open('data.json', 'w') as f:
+    json.dump(data, f)
+
+# print(combinatoria(listaGrupos)[0])
 # print(sumarListas([[0, 1, 0], [1, 0, 1], [0, 1, 0]]))
 
 # print(sum([[1, 2, 3, 4, 5], [1, 1, 1, 1, 1]]))
