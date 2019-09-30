@@ -1,5 +1,6 @@
 import ds
 import json
+import numpy as np
 
 def horarioVacio():
 	horario = [0 for x in range(112)]
@@ -11,14 +12,14 @@ def setHoras(curso,dia,primeraHora,ultimaHora):
 	return curso
 
 data = []
-with open('10680.json') as a:
-	data.append(json.load(a)) # Dinámica
+# with open('10680.json') as a:
+# 	data.append(json.load(a)) # Dinámica
 
-with open('16809.json') as b:
-	data.append(json.load(b)) # Digital
+# with open('16809.json') as b:
+# 	data.append(json.load(b)) # Digital
 
-with open('18473.json') as c:
-	data.append(json.load(c)) # Señales 2
+# with open('18473.json') as c:
+# 	data.append(json.load(c)) # Señales 2
 
 with open('21949.json') as d:
 	data.append(json.load(d)) # Intensive
@@ -58,14 +59,75 @@ for k in range(len(data)):
 		grupo.append({'horario':horario, 'grupo': i, 'asignatura': k})
 	listaGrupos.append(grupo)
 
-def sumarListas(listas):
-	resultado = [0 for x in range(len(listas[0]))]
-	for i in range(len(resultado)):	
-		for lista in listas:
-				resultado[i] += lista[i]		
-	return resultado
-	
+# def sumarLists(listas):
+# 	resultado = [0 for x in range(len(listas[0]))]
+# 	for i in range(len(resultado)):	
+# 		for lista in listas:
+# 				resultado[i] += lista[i]		
+# 	return resultado
 
+#print(sumarListas([[1,2],[2,1],[3,4]]))
+#print([sum(x) for x in zip([1,2,4],[2,1,4],[3,4,4])])
+
+def sacarLista(listas):
+	combinacion = []
+	combinaciones =[]
+	for x in listas:
+		for y in x:
+			combinacion.append(y['horario'])
+		combinaciones.append(combinacion)
+		combinacion = []
+	print(combinaciones)
+
+def sumarListas(listas):
+	resultado = [{'horario': horarioVacio() , 'grupo': [], 'asignatura': []} for x in range(len(listas))]
+	resultado = [0 for x in range(len(listas[0]))]
+	for 
+		for i in range(len(resultado)):	
+			for lista in listas:
+					resultado[i] += lista[i]
+	for i in range(len(resultado)):
+		for j in range(len(listas[i])):
+			resultado[i]['horario'] = [sum(x[j]['horario']) for x in zip(*combinaciones[i])]
+			resultado[i]['grupo'].append(listas[i][j]['grupo'])
+			resultado[i]['asignatura'].append(listas[i][j]['asignatura'])
+	return resultado
+
+def combinatoria(lista):
+	c = np.zeros(len(lista))
+	tamano = []
+	for l in range(len(lista)):
+		tamano.append(len(lista[l]))
+
+	total = []
+	while tamano[0] > c[0]:
+		salida = []
+		for x in range(len(lista)):
+			salida.append(lista[x][int(c[x])])
+		c[len(lista)-1] += 1
+		total.append(salida)
+		for j in reversed(range(len(lista))):
+			if c[j] == tamano[j] and j-1 >=0:
+				c[j-1] += 1
+				c[j] = 0
+				if c[0] == tamano[0]:
+					return total
+			else:
+				break
+	return total
+
+
+def printHorario(horario):
+	for y in range(7):
+		s = ""
+		for x in range(y,16*7,16):
+			s += str(horario[x])
+		print(s)
+
+#printHorario(sumarListas(combinatoria(listaGrupos))[0]['horario'])
+#print(sumarListas(combinatoria(listaGrupos))[0]['horario'])
+#print(sumarListas(combinatoria(listaGrupos)))
+print(sacarLista(combinatoria(listaGrupos))[0])
 #print(listaGrupos[0][1]['horario'])
 #print(listaGrupos)
 
