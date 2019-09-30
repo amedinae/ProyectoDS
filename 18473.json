@@ -1,1 +1,6 @@
-	{"count":4,"list":[{"code":"1","master":"EDGAR ANDRES GUTIERREZ CACERES","quota":31,"free":15,"week":[["7-9"],["--"],["7-9"],["--"],["--"],["--"],["--"]]},{"code":"2","master":"JESUS ALBERTO DELGADO RIVERA","quota":31,"free":20,"week":[["--"],["7-9"],["--"],["7-9"],["--"],["--"],["--"]]},{"code":"3","master":"JAN BACCA RODRIGUEZ","quota":31,"free":0,"week":[["--"],["9-11"],["--"],["9-11"],["--"],["--"],["--"]]},{"code":"4","master":"JAN BACCA RODRIGUEZ","quota":31,"free":0,"week":[["--"],["14-16"],["--"],["14-16"],["--"],["--"],["--"]]}]}
+{"count":4,
+	"list":[
+		{"code":"1","master":"EDGAR ANDRES GUTIERREZ CACERES","quota":31,"free":15,"week":[["7-9"],["--"],["7-9"],["--"],["--"],["--"],["--"]]},
+		{"code":"2","master":"JESUS ALBERTO DELGADO RIVERA","quota":31,"free":20,"week":[["--"],["7-9"],["--"],["7-9"],["--"],["--"],["--"]]},
+		{"code":"3","master":"JAN BACCA RODRIGUEZ","quota":31,"free":0,"week":[["--"],["9-11"],["--"],["9-11"],["--"],["--"],["--"]]},
+		{"code":"4","master":"JAN BACCA RODRIGUEZ","quota":31,"free":0,"week":[["--"],["14-16"],["--"],["14-16"],["--"],["--"],["--"]]}]}
