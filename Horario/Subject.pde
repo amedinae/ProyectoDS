@@ -18,6 +18,19 @@ class Subject{
         setGroup(tempGroup);
         setHours(tempHours);
     }
+    
+    Subject(String x){
+        JSONObject json=loadJSONObject(x);
+        JSONArray test=json.getJSONArray("list");
+        //Es necesario corregir que se escriba el título adecuado
+        setTitle(x);
+        setMaster(test.getJSONObject(0).getString("master"));
+        setGroup(test.getJSONObject(0).getInt("code"));
+        setHours(test);
+        //Corregir también obtención código
+        setCode(000000);
+    }
+    
     //Setters
     void setTitle(String tempTitle){
         title=tempTitle;
