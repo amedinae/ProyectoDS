@@ -11,6 +11,7 @@ class LinkedList(object):
     def __init__(self):
         self.head = None
         self.tail = None
+        self.size = 0
     
     def _iter_(self):
         current = self.head
@@ -33,6 +34,7 @@ class LinkedList(object):
             this = Node(data = key)
             self.head = this
             self.tail = this
+        self.size += 1
             
     def pushBack(self, key):
         if self.tail:
@@ -43,6 +45,7 @@ class LinkedList(object):
             this = Node(data = key)
             self.head = this
             self.tail = this
+        self.size += 1
     
     def topFront(self):
         if self.head:
@@ -59,6 +62,7 @@ class LinkedList(object):
     def popFront(self):
         if self.head:
             self.head = self.head.next
+            self.size -= 1
         else:
             return "Linked list is empty"
         
@@ -71,9 +75,11 @@ class LinkedList(object):
                 this = this.next
             this.next = None
             self.tail = this
+            self.size -= 1
         else:
             self.head = None
             self.tail = None
+            self.size -= 1
             
     def find(self, key):
         if self.head:
@@ -124,11 +130,13 @@ class LinkedList(object):
                         this = Node(data = key)
                         prev.next = this
                         this.next = node.next
+                        self.size += 1
 
                     else:
                         return "Key {} don´t exist ".format(key)
                 else:
                     self.pushFront(key)
+                    self.size += 1
                     
             else:
                 return "Node don´t found"
@@ -143,6 +151,7 @@ class LinkedList(object):
                 this = Node(data = key)
                 this.next = node.next
                 node.next = this
+                self.size += 1
             else:
                 return "Node don´t found"
         else:
@@ -173,6 +182,9 @@ class Queue(LinkedList):
         this = self.topFront()
         self.popFront()
         return this
+
+    def peek(self):
+        return self.topFront()
     
     def empty(self):
         self.empty()

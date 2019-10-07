@@ -29,10 +29,10 @@ def combinatoria(lista):
 def sumarListas(listas):
     horarios = ds.Queue()
     for i in range(len(listas)):
-        resultado = {'matriz': np.zeros((16, 7)).tolist(), 'grupo': [], 'asignatura': []}
+        resultado = {'matriz': np.zeros((16, 7)), 'grupo': [], 'asignatura': []}
         sirve = True
         for j in range(len(listas[i])):
-            resultado['matriz'] += listas[i][j]['matriz'].tolist()
+            resultado['matriz'] += listas[i][j]['matriz']
             resultado['grupo'].append(listas[i][j]['grupo'])
             resultado['asignatura'].append(listas[i][j]['asignatura'])
             for x in range(16):
@@ -113,7 +113,7 @@ for k in range(len(data)):
 # print(listaGrupos)
 
 # print(sumarListas(combinatoria(listaGrupos)))
-print(sumarListas(combinatoria(listaGrupos)))
+print(sumarListas(combinatoria(listaGrupos)).size)
 
 
 # for r in range(len(combinatoria(listaGrupos))):

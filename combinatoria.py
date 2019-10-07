@@ -67,26 +67,6 @@ for k in range(len(data)):
 		grupo.append({'horario':horario, 'grupo': i, 'asignatura': k})
 	listaGrupos.append(grupo)
 
-# def sumarLists(listas):
-# 	resultado = [0 for x in range(len(listas[0]))]
-# 	for i in range(len(resultado)):	
-# 		for lista in listas:
-# 				resultado[i] += lista[i]		
-# 	return resultado
-
-#print(sumarListas([[1,2],[2,1],[3,4]]))
-#print([sum(x) for x in zip([1,2,4],[2,1,4],[3,4,4])])
-
-def sacarLista(listas):
-	combinacion = []
-	combinaciones =[]
-	for x in listas:
-		for y in x:
-			combinacion.append(y['horario'])
-		combinaciones.append(combinacion)
-		combinacion = []
-	print(combinaciones)
-
 def sumarListas(listas):
 	resultado = [{'horario': horarioVacio() , 'grupo': [], 'asignatura': []} for x in range(len(listas))]
 	horarios = ds.Queue()
@@ -138,10 +118,8 @@ def printHorario(horario):
 
 #printHorario(sumarListas(combinatoria(listaGrupos))[0]['horario'])
 #print(sumarListas(combinatoria(listaGrupos))[0]['horario'])
-print(sumarListas(combinatoria(listaGrupos)))
+print(sumarListas(combinatoria(listaGrupos)).peek())
 # algo = sumarListas(combinatoria(listaGrupos))
-# with open('data.json', 'w') as f:
-	#json.dump(algo, f)
 #print(listaGrupos[0][1]['horario'])
 #print(listaGrupos)
 
