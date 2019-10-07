@@ -2,6 +2,7 @@ class Hour{
     PVector time;
     //x va desde 0 a 6, son los días de la semana
     //y va desde 0 a 15, horas desde las 6am hasta las 9pm
+        
     Hour(int x, int y){
         float a=100*x+50;
         float b=40*y+20;
