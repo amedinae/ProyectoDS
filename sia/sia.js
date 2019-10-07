@@ -9,22 +9,12 @@ function busquedaMaterias(palabra){
       else
         console.log('El archivo fue creado');
     });
-    /*var x, txt = "";
-    obj = { table: "customers", limit: 20 };
-    txt += "<table border='1'>"
-    for (x in res) {
-      txt += "<tr><td>" + res[x].name + "</td></tr>";
-    }
-    txt += "</table>"    
-    document.getElementById("demo").innerHTML = txt;*/
     console.log(res);
   }).catch(err => {
     console.log(err);
   });
 }
 
-busquedaMaterias("estadistica");
-busquedaGrupos("9941");
 function busquedaGrupos(codigo){
   siajs.getGroups(codigo).then(res => {
   	fs.writeFile('./'+codigo+'.json',JSON.stringify(res),error => {
@@ -39,3 +29,5 @@ function busquedaGrupos(codigo){
   });
 }
 
+busquedaMaterias("estadistica");
+busquedaGrupos("9941");

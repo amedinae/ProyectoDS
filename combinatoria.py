@@ -27,14 +27,14 @@ with open('21949.json') as d:
 with open('22969.json') as e:
 	data.append(json.load(e)) # Gráfica interactiva
 
-with open('16706.json') as f:
-	data.append(json.load(f))
+with open('16706.json', encoding='utf-8') as q:
+	data.append(json.load(q))
 
-with open('16707.json') as g:
+with open('16707.json', encoding='utf-8') as g:
 	data.append(json.load(g))
 
-with open('16809.json') as h:
-	data.append(json.load(h))
+# with open('16809.json') as h:
+# 	data.append(json.load(h))
 primeraHora = 0
 ultimaHora = 0
 
@@ -141,7 +141,7 @@ def printHorario(horario):
 print(sumarListas(combinatoria(listaGrupos)))
 # algo = sumarListas(combinatoria(listaGrupos))
 # with open('data.json', 'w') as f:
-    #json.dump(algo, f)
+	#json.dump(algo, f)
 #print(listaGrupos[0][1]['horario'])
 #print(listaGrupos)
 
