@@ -5,7 +5,7 @@ class Hour{
         
     Hour(int x, int y){
         float a=100*x+50;
-        float b=40*y+20;
+        float b=40*y;
         time=new PVector(a,b);
     }
     
@@ -14,7 +14,7 @@ class Hour{
         time.set(x*100+50,time.y);
     }
     void setY(int y){
-        time.set(time.x,y*40+20);
+        time.set(time.x,y*40);
     }
     
     //Getters
@@ -22,7 +22,7 @@ class Hour{
         return int(time.x-50)/100;    
     }
     int getY(){
-        return int(time.y-20)/40;
+        return int(time.y)/40;
     }
     PVector getTime(){
         return time;
@@ -30,7 +30,7 @@ class Hour{
     //Otros métodos
     void display(){
         fill(255);
-        rect(time.x,time.y,100,40,7);
+        rect(time.x,time.y,100,40);
     }
     
     
