@@ -29,5 +29,5 @@ function busquedaGrupos(codigo){
   });
 }
 
-busquedaMaterias("estadistica");
-busquedaGrupos("9941");
+busquedaMaterias("2023238");
+busquedaGrupos("20580");

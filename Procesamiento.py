@@ -60,22 +60,33 @@ def sumarListas(listas):
 #             horarios.append(resultado)
 #     return horarios
 
-
 data = []
-with open('10680.json') as a:
-    data.append(json.load(a))  # Dinámica
+# with open('10680.json') as a:
+#   data.append(json.load(a)) # Dinámica
 
 with open('16809.json') as b:
-    data.append(json.load(b))  # Digital
+    data.append(json.load(b)) # Digital
 
 with open('18473.json') as c:
-    data.append(json.load(c))  # Señales 2
+    data.append(json.load(c)) # Señales 2
 
 with open('21949.json') as d:
-    data.append(json.load(d))  # Intensive
+    data.append(json.load(d)) # Intensive
 
 with open('22969.json') as e:
-    data.append(json.load(e))  # Gráfica interactiva
+    data.append(json.load(e)) # Gráfica interactiva
+
+with open('16706.json', encoding='utf-8') as q:
+  data.append(json.load(q))
+
+with open('16707.json', encoding='utf-8') as g:
+  data.append(json.load(g))
+
+# with open('20580.json', encoding='utf-8') as h:
+#   data.append(json.load(h))
+
+with open('16809.json') as :
+  data.append(json.load(h))
 
 
 listaGrupos = []
@@ -113,7 +124,7 @@ for k in range(len(data)):
 # print(listaGrupos)
 
 # print(sumarListas(combinatoria(listaGrupos)))
-print(sumarListas(combinatoria(listaGrupos)).size)
+print(sumarListas(combinatoria(listaGrupos)))
 
 
 # for r in range(len(combinatoria(listaGrupos))):
