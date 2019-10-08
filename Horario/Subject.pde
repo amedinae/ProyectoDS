@@ -84,10 +84,10 @@ class Subject{
             hours[i].display();
             fill(0);
             textSize(15);
-            text(title,hours[i].getTime().x+50,hours[i].getTime().y+15);
+            text(title,hours[i].getTime().x+2,hours[i].getTime().y,100,40);
             textSize(10);
-            text(master,hours[i].getTime().x+50,hours[i].getTime().y+25);
-            text(code+" - "+group,hours[i].getTime().x+50,hours[i].getTime().y+35);
+            text(master,hours[i].getTime().x+2,hours[i].getTime().y+16,100,24);
+            text(code+" - "+group,hours[i].getTime().x+2,hours[i].getTime().y+27,100,40);
         }
         
     }
@@ -116,16 +116,16 @@ class Subject{
       Hour[] tempHours=new Hour[2*contar(tempIndx)];
       int ap=0;
       int y=0;
-      println(tempIndx);
+      //println(tempIndx);
       for(int i=0; i<7; i++){
         if(tempIndx[i]!=0){
-          println(week.getJSONObject(0).getJSONArray("week").getJSONArray(i).getString(0).substring(0,tempIndx[i]));
+          //println(week.getJSONObject(0).getJSONArray("week").getJSONArray(i).getString(0).substring(0,tempIndx[i]));
           y=Integer.valueOf(week.getJSONObject(0).getJSONArray("week").getJSONArray(0).getString(0).substring(0,tempIndx[i]))-6;
           println("y="+y);
-          tempHours[ap]=new Hour(i,y);
+          tempHours[ap]=new Hour(i,y+1);
           ap++;
           y++;
-          tempHours[ap]=new Hour(i,y);
+          tempHours[ap]=new Hour(i,y+1);
           ap++;
         }
           
