@@ -12,20 +12,20 @@ def setHoras(curso,dia,primeraHora,ultimaHora):
 	return curso
 
 data = []
-# with open('10680.json') as a:
-# 	data.append(json.load(a)) # Dinámica
+with open('10680.json') as a:
+	data.append(json.load(a)) # Dinámica
 
-# with open('16809.json') as b:
-# 	data.append(json.load(b)) # Digital
+with open('16809.json') as b:
+	data.append(json.load(b)) # Digital
 
-# with open('18473.json') as c:
-# 	data.append(json.load(c)) # Señales 2
+with open('18473.json') as c:
+	data.append(json.load(c)) # Señales 2
 
 with open('21949.json') as d:
 	data.append(json.load(d)) # Intensive
 
-with open('22969.json') as e:
-	data.append(json.load(e)) # Gráfica interactiva
+# with open('22969.json') as e:
+# 	data.append(json.load(e)) # Gráfica interactiva
 
 # with open('16706.json', encoding='utf-8') as q:
 # 	data.append(json.load(q))
@@ -118,6 +118,7 @@ def combinatoria(lista):
 #print(sumarListas(combinatoria(listaGrupos))[0]['horario'])
 
 final = sumarListas(combinatoria(listaGrupos))
+print(final)
 print(len(final))
 
 with open('final.json', 'w') as file:

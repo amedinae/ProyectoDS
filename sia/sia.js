@@ -29,5 +29,5 @@ function busquedaGrupos(codigo){
   });
 }
 
-busquedaMaterias("2023238");
-busquedaGrupos("20580");
+busquedaMaterias("ingenieria economica");
+busquedaGrupos("");
