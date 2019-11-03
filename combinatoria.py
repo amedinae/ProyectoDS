@@ -24,14 +24,14 @@ with open('18473.json') as c:
 with open('21949.json') as d:
 	data.append(json.load(d)) # Intensive
 
-# with open('22969.json') as e:
-# 	data.append(json.load(e)) # Gráfica interactiva
+with open('22969.json') as e:
+	data.append(json.load(e)) # Gráfica interactiva
 
-# with open('16706.json', encoding='utf-8') as q:
-# 	data.append(json.load(q))
+with open('16706.json', encoding='utf-8') as q:
+	data.append(json.load(q))
 
-# with open('16707.json', encoding='utf-8') as g:
-# 	data.append(json.load(g))
+with open('16707.json', encoding='utf-8') as g:
+	data.append(json.load(g))
 
 # with open('20580.json', encoding='utf-8') as h:
 # 	data.append(json.load(h))
@@ -79,13 +79,16 @@ def sumarListas(listas):
 	for i in range(len(resultado)):
 		sirve = True
 		for j in range(len(listas[i])):	
-			for z in range(len(resultado[i]['horario'])): 
-				resultado[i]['horario'][z] += listas[i][j]['horario'][z]
+			for z in range(len(resultado[i]['horario'])):
+				if (resultado[i]['horario'][z] + listas[i][j]['horario'][z] <2): 
+					resultado[i]['horario'][z] += listas[i][j]['horario'][z]
+				else:
+					sirve = False
+					break
+			if not sirve:
+				break
 			resultado[i]['grupo'].append(listas[i][j]['grupo'])
 			resultado[i]['asignatura'].append(listas[i][j]['asignatura'])
-			for x in range(112):
-				if (resultado[i]['horario'][x] > 1):
-					sirve = False
 		if sirve:
 			#horarios.enqueue(resultado[i])
 			horarios.append(resultado[i])			

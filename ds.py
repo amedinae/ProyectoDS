@@ -27,13 +27,13 @@ class LinkedList(object):
             this = this.next
         return '[' + ', '.join(nodes) + ']'
     
-    def pushFront(self, key):
+    def pushFront(self,key):
         if self.head:
             self.head = Node(data = key, next = self.head)
         else :
-            this = Node(data = key)
-            self.head = this
-            self.tail = this
+            temp = Node(data = key)
+            self.head = temp
+            self.tail = temp
         self.size += 1
             
     def pushBack(self, key):
@@ -110,9 +110,9 @@ class LinkedList(object):
     
     def empty(self):
         if self.head:
-            return True
-        else:
             return False
+        else:
+            return True
         
     def addBefore(self, node, key):
         if self.head:
@@ -158,7 +158,7 @@ class LinkedList(object):
             return "Linked list is empty"
 
 
-class Stack(LinkedList):
+class StackList(LinkedList):
     def push(self, key):
         self.pushFront(key)
         
@@ -174,7 +174,7 @@ class Stack(LinkedList):
         self.empty()
 
 
-class Queue(LinkedList):
+class QueueList(LinkedList):
     def enqueue(self, key):
         self.pushBack(key)
         
@@ -188,3 +188,70 @@ class Queue(LinkedList):
     
     def empty(self):
         self.empty()
+
+class StackArray(object):
+
+    def __init__(self):
+        self.data = []
+        self.top = -1
+
+    def __repr__(self):
+        return repr(self.data)
+
+    def isEmpty(self):
+            return self.top == -1
+
+    def push(self,value):
+        self.data.append(value)
+        self.top += 1
+
+    def pop(self):
+        if(not self.isEmpty()):
+            temp = self.data
+            self.data[self.top] = 0
+            self.top -= 1
+            return temp
+        else:
+            print("Stack is Empty") 
+
+    def peek(self):
+        if(not self.isEmpty()):
+            return self.data[self.top]
+        else:
+            return "Stack is Empty"
+
+class QueueArray(object):
+
+    def __init__(self):
+        self.data = []
+        self.head = -1
+        self.tail = -1
+        self.size = 0
+
+    def __repr__(self):
+        return repr(self.data)
+
+    def isEmpty(self):
+        return self.size == 0
+
+    def enqueue(self,value):
+        self.data.append(value)
+        if(self.isEmpty()):
+            self.head +=1
+            self.tail = self.head
+        else:
+            self.tail+=1
+        self.size +=1
+
+    def dequeue(self):
+        if (not self.isEmpty()):
+            temp = self.data[self.head]
+            self.data[self.head]=None
+            self.head += 1
+            self.size -=1
+            return temp
+        else:
+            return "Queue is Empty"
+
+    def peek(self):
+        return self.data[self.head]    
