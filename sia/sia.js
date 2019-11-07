@@ -9,11 +9,11 @@ function busquedaMaterias(palabra){
     //   else
     //     console.log('El archivo fue creado');
     // });
-    console.log(res);
+    return res
   }).catch(err => {
     console.log(err);
   });
-}
+}   
 
 function busquedaGrupos(codigo){
   siajs.getGroups(codigo).then(res => {
@@ -23,11 +23,11 @@ function busquedaGrupos(codigo){
    //    else
    //      console.log('El archivo fue creado');
    //  });
-    console.log(res);
+    return res
   }).catch(err => {
     console.log(err);
   });
 }
 
-busquedaMaterias("");
-busquedaGrupos("");
+busquedaMaterias("Hola");
+busquedaGrupos("1");

@@ -1,6 +1,6 @@
 import ds
 import json
-import numpy as np
+import numpy
 
 def horarioVacio():
 	horario = [0 for x in range(112)]
@@ -73,7 +73,6 @@ for k in range(len(data)):
 
 def sumarListas(listas):
 	resultado = [{'horario': horarioVacio() , 'grupo': [], 'asignatura': []} for x in range(len(listas))]
-	#horarios = ds.Queue()
 	horarios = []
 
 	for i in range(len(resultado)):
@@ -90,12 +89,11 @@ def sumarListas(listas):
 			resultado[i]['grupo'].append(listas[i][j]['grupo'])
 			resultado[i]['asignatura'].append(listas[i][j]['asignatura'])
 		if sirve:
-			#horarios.enqueue(resultado[i])
 			horarios.append(resultado[i]['grupo'])			
 	return horarios
 
 def combinatoria(lista):
-	c = np.zeros(len(lista))
+	c = [0 for e in lista]
 	tamano = []
 	for l in range(len(lista)):
 		tamano.append(len(lista[l]))
@@ -117,19 +115,9 @@ def combinatoria(lista):
 				break
 	return total
 
-#printHorario(sumarListas(combinatoria(listaGrupos))[0]['horario'])
-#print(sumarListas(combinatoria(listaGrupos))[0]['horario'])
-
 final = sumarListas(combinatoria(listaGrupos))
 print(final)
 print(len(final))
 
 with open('final.json', 'w') as file:
-    json.dump(json.dumps(final), file, indent=4)
-
-# algo = sumarListas(combinatoria(listaGrupos))
-#print(listaGrupos[0][1]['horario'])
-#print(listaGrupos)
-
-
-			
+    json.dump(json.dumps(final), file, indent=4)			
