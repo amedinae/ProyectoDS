@@ -9,7 +9,7 @@ function busquedaMaterias(palabra){
     //   else
     //     console.log('El archivo fue creado');
     // });
-    return res
+    console.log(res);
   }).catch(err => {
     console.log(err);
   });
@@ -29,5 +29,4 @@ function busquedaGrupos(codigo){
   });
 }
 
-busquedaMaterias("Hola");
-busquedaGrupos("1");
+busquedaMaterias("ondas");
