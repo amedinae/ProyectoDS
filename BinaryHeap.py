@@ -40,6 +40,6 @@ class BinaryHeap(object):
 
     def extractMax(self):
         result = self.H[1]
-        self.H[1] = self.H[len(self.H)]
+        self.H[1] = self.H[len(self.H) - 1]
         self.siftDown(1)
         return result
