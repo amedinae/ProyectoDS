@@ -9,3 +9,6 @@ for i in range(10):
     with open('Datos falsos/{}.json'.format(i), 'w') as f:
         root = arbol.insert(t=root, key=[i, json.dump(data, f)])
 arbol.preOrder(root)
+
+
+
