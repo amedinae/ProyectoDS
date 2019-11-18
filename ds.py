@@ -179,7 +179,7 @@ class QueueList(LinkedList):
         self.pushBack(key)
         
     def dequeue(self):
-        this = self.topFront()
+        this = self.topFront().data
         self.popFront()
         return this
 
