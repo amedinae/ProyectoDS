@@ -1,0 +1,11 @@
+{"count":7,
+ "pags":1,
+ "list":[
+		{"id":"2016080","code":"19397","name":"APLICACIONES GRAFICAS TRIDIMENSIONALES","type":"C","credits":3},
+		{"id":"2023222","code":"14964","name":"DOCUMENTACION GRAFICA DEL PATRIMONIO","type":"C","credits":3},
+		{"id":"2016922","code":"22905","name":"INTRODUCCION A LA GRAFICA","type":"C","credits":3},
+		{"id":"2023244","code":"20594","name":"COMPUTACION GRAFICA","type":"L","credits":5},
+		{"id":"1000075-B","code":"22969","name":"GRAFICA INTERACTIVA","type":"L","credits":3},
+		{"id":"2023264","code":"20121","name":"INFOGRAF'IA ( DE LA GRAFICA EN EL AUDIOVISUAL)","type":"L","credits":2},
+		{"id":"2022229","code":"14821","name":"NARRACION GRAFICA","type":"L","credits":2}]
+}
