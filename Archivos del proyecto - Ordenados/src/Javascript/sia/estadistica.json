@@ -1,0 +1,20 @@
+{"count":26,
+	"pags":2,
+	"list":[
+		{"id":"2027878","code":"42199","name":"INFERENCIA ESTADISTICA FUNDAMENTAL","type":"B","credits":4},
+		{"id":"2026879","code":"23398","name":"PRINCIPIOS DE ESTADISTICA PARA ODONTOLOGIA","type":"B","credits":3},
+		{"id":"1000013-B","code":"9941","name":"PROBABILIDAD Y ESTADISTICA FUNDAMENTAL","type":"B","credits":3},
+		{"id":"2016344","code":"21702","name":"CONSULTORIA ESTADISTICA","type":"C","credits":2},
+		{"id":"2016355","code":"21703","name":"ESTADISTICA Y SOCIEDAD","type":"C","credits":3},
+		{"id":"2016690","code":"18004","name":"MECANICA ESTADISTICA","type":"C","credits":3},
+		{"id":"2016345","code":"12194","name":"SEMINARIO DE ESTADISTICA","type":"C","credits":2},
+		{"id":"2020534","code":"14011","name":"ESTADISTICA II","type":"T","credits":4},
+		{"id":"2020226","code":"15489","name":"MECANICA ESTADISTICA AVANZADA","type":"T","credits":4},
+		{"id":"2026958","code":"23468","name":"TOPICOS AVANZADOS DE ESTADISTICA","type":"T","credits":4},
+		{"id":"2016335","code":"12137","name":"COMPUTACION ESTADISTICA","type":"M","credits":4},
+		{"id":"2016365","code":"12090","name":"ESTADISTICA DESCRIPTIVA MULTIVARIADA","type":"M","credits":4},
+		{"id":"2016366","code":"12091","name":"ESTADISTICA DESCRIPTIVA Y EXPLORATORIA","type":"M","credits":4},
+		{"id":"2016367","code":"12092","name":"ESTADISTICA ESPACIAL","type":"M","credits":4},
+		{"id":"2018617","code":"16920","name":"ESTADISTICA MATEMATICA","type":"M","credits":4}
+	]
+}
