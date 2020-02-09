@@ -1,0 +1,262 @@
+[
+  {
+    "count": 4,
+    "list": [
+      {
+        "code": "1",
+        "master": "EDGAR ANDRES GUTIERREZ CACERES",
+        "quota": 31,
+        "free": 15,
+        "week": [
+          [
+            "7-9"
+          ],
+          [
+            "--"
+          ],
+          [
+            "7-9"
+          ],
+          [
+            "--"
+          ],
+          [
+            "--"
+          ],
+          [
+            "--"
+          ],
+          [
+            "--"
+          ]
+        ]
+      },
+      {
+        "code": "2",
+        "master": "JESUS ALBERTO DELGADO RIVERA",
+        "quota": 31,
+        "free": 20,
+        "week": [
+          [
+            "--"
+          ],
+          [
+            "7-9"
+          ],
+          [
+            "--"
+          ],
+          [
+            "7-9"
+          ],
+          [
+            "--"
+          ],
+          [
+            "--"
+          ],
+          [
+            "--"
+          ]
+        ]
+      },
+      {
+        "code": "3",
+        "master": "JAN BACCA RODRIGUEZ",
+        "quota": 31,
+        "free": 0,
+        "week": [
+          [
+            "--"
+          ],
+          [
+            "9-11"
+          ],
+          [
+            "--"
+          ],
+          [
+            "9-11"
+          ],
+          [
+            "--"
+          ],
+          [
+            "--"
+          ],
+          [
+            "--"
+          ]
+        ]
+      },
+      {
+        "code": "4",
+        "master": "JAN BACCA RODRIGUEZ",
+        "quota": 31,
+        "free": 0,
+        "week": [
+          [
+            "--"
+          ],
+          [
+            "14-16"
+          ],
+          [
+            "--"
+          ],
+          [
+            "14-16"
+          ],
+          [
+            "--"
+          ],
+          [
+            "--"
+          ],
+          [
+            "--"
+          ]
+        ]
+      }
+    ],
+    "materia": "SEÑALES Y SISTEMAS II ",
+    "code": 18473,
+    "C_M": 1,
+    "C_G": [
+      5,
+      3,
+      4,
+      6
+    ]
+  },
+  {
+    "count": 4,
+    "list": [
+      {
+        "code": "1",
+        "master": "CARLOS JULIO CAMACHO LOPEZ",
+        "quota": 44,
+        "free": 8,
+        "week": [
+          [
+            "--"
+          ],
+          [
+            "7-9"
+          ],
+          [
+            "--"
+          ],
+          [
+            "7-9"
+          ],
+          [
+            "--"
+          ],
+          [
+            "--"
+          ],
+          [
+            "--"
+          ]
+        ]
+      },
+      {
+        "code": "2",
+        "master": "NELSON ARZOLA DE LA PEÑA",
+        "quota": 45,
+        "free": 0,
+        "week": [
+          [
+            "--"
+          ],
+          [
+            "9-11"
+          ],
+          [
+            "--"
+          ],
+          [
+            "9-11"
+          ],
+          [
+            "--"
+          ],
+          [
+            "--"
+          ],
+          [
+            "--"
+          ]
+        ]
+      },
+      {
+        "code": "3",
+        "master": "JAIME GUILLERMO GUERRERO CASADIEGO",
+        "quota": 44,
+        "free": 0,
+        "week": [
+          [
+            "--"
+          ],
+          [
+            "--"
+          ],
+          [
+            "11-13"
+          ],
+          [
+            "--"
+          ],
+          [
+            "11-13"
+          ],
+          [
+            "--"
+          ],
+          [
+            "--"
+          ]
+        ]
+      },
+      {
+        "code": "4",
+        "master": "JAIME GUILLERMO GUERRERO CASADIEGO",
+        "quota": 45,
+        "free": 1,
+        "week": [
+          [
+            "--"
+          ],
+          [
+            "11-13"
+          ],
+          [
+            "--"
+          ],
+          [
+            "11-13"
+          ],
+          [
+            "--"
+          ],
+          [
+            "--"
+          ],
+          [
+            "--"
+          ]
+        ]
+      }
+    ],
+    "materia": "2-PRINCIPIOS DE DINAMICA ",
+    "code": 10680,
+    "C_M": 1,
+    "C_G": [
+      5,
+      2,
+      4,
+      7
+    ]
+  }
+]
