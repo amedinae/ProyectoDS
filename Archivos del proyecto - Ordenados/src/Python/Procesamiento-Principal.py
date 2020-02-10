@@ -18,7 +18,7 @@ def setHoras(curso, dia, primeraHora, ultimaHora):
 
 
 def leerMaterias():
-    with open('calificados.json') as a:
+    with open('calificados7.json', encoding='utf-8') as a:
         data = json.load(a)  # Dinámica
     return data
 
@@ -136,9 +136,9 @@ def sumarListas(listas):
     return horarios
 
 
-def prioridadHorario(horarios, k):
+def prioridadHorario(horarios):
     cola = QueueList()
-    for i in range(k):
+    for x in range(len(horarios.H)-1):
         cola.enqueue(horarios.extractMax())
     return cola
 
@@ -147,15 +147,15 @@ def prioridadHorario(horarios, k):
 
 if __name__ == '__main__':
     algo = sumarListas(combinatoria(organizarHorario(leerMaterias())))
-    print("Bienvenido al visualizador de Poderak")
-    print("¿Cuántos horarios quieres visualizar?")
-    n = int(input())
-    print(2)
-    cola_ordenada = prioridadHorario(algo, n)
-    cola_final = []
-    for x in range(n):
-        cola_final.append(cola_ordenada.dequeue()) #Conversión a objeto serializable, para que se pueda transformar en un JSON
-    print(cola_final)
+    #print("Bienvenido al visualizador de Poderak")
+    #print("¿Cuántos horarios quieres visualizar?")
+    #n = int(input())
+        #l = len(algo.H)
+        #cola_ordenada = prioridadHorario(algo)
+        #cola_final = []
+        #for x in range(l-1):
+        #    cola_final.append(cola_ordenada.dequeue()) #Conversión a objeto serializable, para que se pueda transformar en un JSON
+        #print(cola_final,len(cola_final))
     #with open('C:/Users/juand/Desktop/Horario/Ordenar/data/data.json', 'w') as f:
         #json.dump(cola_final, f)
 
