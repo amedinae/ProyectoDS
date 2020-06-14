@@ -42,4 +42,5 @@ class BinaryHeap(object):
         result = self.H[1]
         self.H[1] = self.H[len(self.H) - 1]
         self.siftDown(1)
+        self.H.pop()
         return result

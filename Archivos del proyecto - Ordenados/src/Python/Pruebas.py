@@ -1,6 +1,9 @@
-import math
+from BinaryHeap import BinaryHeap
 
-def hash(key):
-	return sum([ord(c) for c in key])%31
+horarios = BinaryHeap(1000000)
 
-print(hash('C_G'))
+for x in range(1000000):
+	horarios.insert(x,x)
+
+for x in range(1000000):
+	horarios.extractMax()

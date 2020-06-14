@@ -119,6 +119,8 @@
         ]
       }
     ],
+    "materia": "PRINCIPIOS DE DINAMICA",
+    "code": 10680,
     "C_M": 5,
     "C_G": [
       3,
@@ -403,6 +405,8 @@
         ]
       }
     ],
+    "materia": "Electronica Digital I",
+    "code": 16809,
     "C_M": 2,
     "C_G": [
       6,
@@ -535,6 +539,8 @@
         ]
       }
     ],
+    "materia": "SEÑALES Y SISTEMAS II ",
+    "code": 18473,
     "C_M": 3,
     "C_G": [
       2,
@@ -837,6 +843,8 @@
         ]
       }
     ],
+    "materia": "Intensive English I",
+    "code": 21949,
     "C_M": 4,
     "C_G": [
       7,
